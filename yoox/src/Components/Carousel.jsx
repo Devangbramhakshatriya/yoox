@@ -8,7 +8,7 @@ export const Slides=() => (
       <Text className="legend" >Legent 1</Text>
     </div>
     <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg" />
+      <img alt="" src="https://www.yoox.com/images/yoox80/banners/6895_1_Genz_WM_Main.png?634485886869569819&impolicy=cropDefault&width=960&height=510" />
       <p className="legend">Legend 2</p>
     </div>
     <div>
