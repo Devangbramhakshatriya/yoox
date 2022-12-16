@@ -1,7 +1,7 @@
 import { Grid, GridItem,Image } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import ProductCart from "../Components/ProductCart";
-
+import Carousel from "react-elastic-carousel";
 function Home(){
     const [data,setData]=useState([]);
     useEffect(()=>{

@@ -14,9 +14,11 @@
     "onsenui": "^2.12.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-elastic-carousel": "0.6.1",
     "react-icons": "^4.7.1",
     "react-onsenui": "^1.13.2",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
