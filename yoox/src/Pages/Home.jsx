@@ -1,7 +1,8 @@
 import { Grid, GridItem,Image } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import { Slides } from "../Components/Carousel";
 import ProductCart from "../Components/ProductCart";
-import Carousel from "react-elastic-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 function Home(){
     const [data,setData]=useState([]);
     useEffect(()=>{
@@ -13,6 +14,7 @@ function Home(){
     console.log(data)
     return(
         <>
+        <Slides/>
         <Image w="100%" src="https://www.yoox.com/images/yoox80/banners/6895_1_Genz_WM_Main.png?634485886869569819&impolicy=cropDefault&width=960&height=510"/>
         <Grid templateColumns="repeat(4,1fr)" gap={6}>
             {
