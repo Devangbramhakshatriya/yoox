@@ -2,62 +2,38 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import {Text} from "@chakra-ui/react";
 export const Slides=() => (
-  <Carousel autoPlay>
-    <div>
-      <img alt="" src="https://www.yoox.com/images/yoox80/banners/6895_1_Genz_WM_Main.png?634485886869569819&impolicy=cropDefault&width=960&height=510" />
-      <Text className="legend" >Legent 1</Text>
+  <Carousel autoPlay >
+    <div >
+      <img style={{width:"300px"}}  alt="" src="https://www.yoox.com/images/yoox80/banners/6825_3_BaumeMercier_Tris_M.png?634485886869569819#width=473&height=660" />
+      <p className="legend">Fleece sweatpants in 100% organic cotton</p>
     </div>
     <div>
-      <img alt="" src="https://www.yoox.com/images/yoox80/banners/6895_1_Genz_WM_Main.png?634485886869569819&impolicy=cropDefault&width=960&height=510" />
-      <p className="legend">Legend 2</p>
+      <img style={{width:"300px"}} alt="" src="https://www.yoox.com/images/yoox80/banners/6825_1_COS_Tris_M.png?634485886869569819#width=473&height=660" />
+      <p className="legend">Striped shirt in 100% cotton</p>
     </div>
     <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-3.jpg" />
-      <p className="legend">Legend 3</p>
+      <img style={{width:"300px"}} alt="" src="https://www.yoox.com/images/yoox80/banners/6825_6_Montblanc_M_Tris.jpg?634485886869569819#width=473&height=660" />
+      <p className="legend">Shorts & Bermuda</p>
     </div>
     <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-4.jpg" />
-      <p className="legend">Legend 4</p>
+      <img style={{width:"300px"}} alt="" src="https://www.yoox.com/images/yoox80/banners/6825_5_BaumeMercier_Tris_W.png?634485886869569819#width=473&height=660" />
+      <p className="legend">Denim pants</p>
     </div>
     <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-5.jpg" />
-      <p className="legend">Legend 5</p>
+      <img style={{width:"300px"}} alt="" src="https://www.yoox.com/images/items/12/12766118ba_14_f.jpg?width=210&height=272&impolicy=crop&gravity=Center" />
+      <p className="legend">Solid color shirts</p>
     </div>
     <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-6.jpg" />
-      <p className="legend">Legend 6</p>
+      <img style={{width:"300px"}} alt="" src="https://www.yoox.com/images/items/13/13778830xe_14_f.jpg?width=210&height=272&impolicy=crop&gravity=Center" />
+      <p className="legend">Casual pants"</p>
     </div>
     <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-7.jpg" />
-      <p className="legend">Legend 7</p>
+      <img style={{width:"300px"}} alt="" src="https://www.yoox.com/images/items/13/13778830xe_14_f.jpg?width=210&height=272&impolicy=crop&gravity=Center" />
+      <p className="legend">Denim pants"</p>
     </div>
     <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-8.jpg" />
-      <p className="legend">Legend 8</p>
-    </div>
-    <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-9.jpg" />
-      <p className="legend">Legend 9</p>
-    </div>
-    <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-10.jpg" />
-      <p className="legend">Legend 10</p>
-    </div>
-    <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-11.jpg" />
-      <p className="legend">Legend 11</p>
-    </div>
-    <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-12.jpg" />
-      <p className="legend">Legend 12</p>
-    </div>
-    <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-13.jpg" />
-      <p className="legend">Legend 13</p>
-    </div>
-    <div>
-      <img alt="" src="http://lorempixel.com/output/cats-q-c-640-480-14.jpg" />
-      <p className="legend">Legend 14</p>
+      <img style={{width:"300px"}} alt="" src="https://www.yoox.com/images/items/13/13757132di_14_e.jpg?width=210&height=272&impolicy=crop&gravity=Center" />
+      <p className="legend">Casual pants</p>
     </div>
   </Carousel>
 );

@@ -1,8 +1,9 @@
-import { Grid, GridItem,Image } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem,Image } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Slides } from "../Components/Carousel";
 import ProductCart from "../Components/ProductCart";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import HomeCards from "../Components/HomeCards";
 function Home(){
     const [data,setData]=useState([]);
     useEffect(()=>{
@@ -14,9 +15,21 @@ function Home(){
     console.log(data)
     return(
         <>
-        <Slides/>
         <Image w="100%" src="https://www.yoox.com/images/yoox80/banners/6895_1_Genz_WM_Main.png?634485886869569819&impolicy=cropDefault&width=960&height=510"/>
-        <Grid templateColumns="repeat(4,1fr)" gap={6}>
+        <Box p={100} w="80%" margin="auto">
+        <Slides/>
+        </Box>
+        <Box margin="auto">
+            <HomeCards/>
+        </Box>
+        <Box>
+            <Flex margin="auto" gap={6} >
+                <Image w="600px" src="https://www.yoox.com/images/yoox80/banners/6824_1_TrendSpace_HL_M.jpg?634485886869569819#width=430&height=600"/>
+                <Image w="600px" src="https://www.yoox.com/images/yoox80/banners/6971_2_HL_DM_US.png?634485886869569819#width=430&height=600"/>
+                <Image w="600px" src="https://www.yoox.com/images/yoox80/banners/6825_1_COS_Tris_M.png?634485886869569819#width=473&height=660"/>
+            </Flex>
+        </Box>
+        {/* <Grid templateColumns="repeat(4,1fr)" gap={6}>
             {
                 data?.length>0&&data.map((e)=>{
                     return(
@@ -37,7 +50,7 @@ function Home(){
                     )
                 })
             }
-        </Grid>
+        </Grid> */}
         </>
     )
 }

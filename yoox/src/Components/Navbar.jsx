@@ -7,7 +7,7 @@ function Navbar(){
 
     return(
         <>
-        <Box>
+        <Box >
             <Box bg="#FFFFFF" display="flex" justifyContent="end" gap="10" borderBottom="0.5px solid gray" >
                 <Text display="flex"><BsPencilFill/>Register</Text>
                 <Text display="flex" marginRight="5px"><IoMdUnlock/>Login</Text>
@@ -19,7 +19,7 @@ function Navbar(){
 
                 <Text fontWeight="bold">MEN</Text>
                 <Spacer/>
-                <Image src="Project.png" alt="Logo" w="130px" h="60px" />
+                <Image src="Yooxpic.jpg" alt="Logo" w="130px" h="60px" />
                 <Spacer/>
                 <Input type="text" placeholder="Search" w="50%" />
                 <Spacer/>
