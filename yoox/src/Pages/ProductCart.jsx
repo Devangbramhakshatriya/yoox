@@ -1,9 +1,14 @@
 import { Box,Flex,Image as IImage,Text} from "@chakra-ui/react";
+import { Link as RouterLink} from "react-router-dom";
+import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
 
-function ProductCart({Image,NewPrice,OldPrice,Offer,brand,category,aSize,aSize2,aSize3,aSize4}){
+function ProductCart({Image,NewPrice,OldPrice,Offer,brand,category,aSize,aSize2,aSize3,aSize4,id}){
     return(
         <>
-        <Box fontFamily="sans-serif" w="200px" >
+        
+        <RouterLink to={`/data/${id}`}>
+        <Box fontFamily="sans-serif" w="200px">
         <Box boxShadow="md">
             <IImage src={Image} alt={category}/>
         </Box>
@@ -23,6 +28,8 @@ function ProductCart({Image,NewPrice,OldPrice,Offer,brand,category,aSize,aSize2,
             </Flex>
         </Box>
         </Box>
+        </RouterLink>
+        
         </>
     )
 }

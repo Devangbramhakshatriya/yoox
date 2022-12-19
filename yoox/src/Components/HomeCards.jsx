@@ -1,5 +1,6 @@
 import { Image as IImage, Box,Text,Flex,Grid,GridItem,SimpleGrid } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import {Link as RouterLink} from "react-router-dom";
 function HomeCards(){
     const [data,setData]=useState([]);
     useEffect(()=>{
@@ -15,7 +16,9 @@ function HomeCards(){
             {
                 data?.length>0&&data.map((e)=>{
                     return(
-                        <GridItem key={e.Image}>
+                        
+                        <GridItem key={e.id}>
+                            <RouterLink to="/products">
                            <Box fontFamily="sans-serif" w="200px" >
         <Box boxShadow="md">
             <IImage src={e.Image} alt={e.category}/>
@@ -36,7 +39,9 @@ function HomeCards(){
             </Flex>
         </Box>
         </Box>
+        </RouterLink>
                         </GridItem>
+                        
                     )
                 })
             }

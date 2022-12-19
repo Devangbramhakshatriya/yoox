@@ -1,20 +1,23 @@
 import { Box, Flex, Grid, GridItem,Image } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Slides } from "../Components/Carousel";
-import ProductCart from "../Components/ProductCart";
+import ProductCart from "./ProductCart";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import HomeCards from "../Components/HomeCards";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 function Home(){
-    const [data,setData]=useState([]);
-    useEffect(()=>{
-        fetch(`http://localhost:8080/data`)
-        .then((res)=>res.json())
-        .then((res)=>setData(res))
-        .catch((err)=>console.log(err))
-    },[])
-    console.log(data)
+    // const [data,setData]=useState([]);
+    // useEffect(()=>{
+    //     fetch(`http://localhost:8080/data`)
+    //     .then((res)=>res.json())
+    //     .then((res)=>setData(res))
+    //     .catch((err)=>console.log(err))
+    // },[])
+    // console.log(data)
     return(
         <>
+        <Navbar/>
         <Image w="100%" src="https://www.yoox.com/images/yoox80/banners/6895_1_Genz_WM_Main.png?634485886869569819&impolicy=cropDefault&width=960&height=510"/>
         <Box p={100} w="80%" margin="auto">
         <Slides/>
@@ -33,7 +36,7 @@ function Home(){
             {
                 data?.length>0&&data.map((e)=>{
                     return(
-                        <GridItem key={e.Image}>
+                        <GridItem key={e.id}>
                             <ProductCart
                             Image={e.Image}
                             category={e.category}
@@ -50,7 +53,8 @@ function Home(){
                     )
                 })
             }
-        </Grid> */}
+            </Grid> */}
+            <Footer/>
         </>
     )
 }
