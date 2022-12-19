@@ -2,15 +2,32 @@ import {Box,Flex,Text,Center,Image,Input,HStack,Spacer} from "@chakra-ui/react"
 import {BsPencilFill} from "react-icons/bs"
 import {IoMdUnlock} from "react-icons/io"
 import {FiShoppingBag} from "react-icons/fi"
-
+import {Link as RouterLink} from "react-router-dom";
 function Navbar(){
-
+    let status=JSON.parse(localStorage.getItem("loginStatus"))
+    const HandleLogin=()=>{
+        localStorage.setItem("loginStatus","false")
+        window.location.reload();
+    }
     return(
         <>
         <Box >
             <Box bg="#FFFFFF" display="flex" justifyContent="end" gap="10" borderBottom="0.5px solid gray" >
-                <Text display="flex"><BsPencilFill/>Register</Text>
-                <Text display="flex" marginRight="5px"><IoMdUnlock/>Login</Text>
+                <RouterLink to="/signup">
+                <Text disabled={status==true} display="flex"><BsPencilFill/>Register</Text>
+                </RouterLink>
+                {status? 
+                <Text onClick={HandleLogin} display="flex" marginRight="5px"><IoMdUnlock/>Logout</Text>
+                :
+                <RouterLink to="/login">
+                 <Text display="flex" marginRight="5px"><IoMdUnlock/>Login</Text>
+                 </RouterLink>
+                 }
+
+
+               {/* <RouterLink to="/login"> 
+                <Text display="flex" marginRight="5px"><IoMdUnlock/> {status? "Logout":"Login"}</Text>
+               </RouterLink> */}
             </Box>
         </Box>
 
@@ -23,8 +40,9 @@ function Navbar(){
                 <Spacer/>
                 <Input type="text" placeholder="Search" w="50%" />
                 <Spacer/>
+                <RouterLink to="/cart">
                 <FiShoppingBag size={40}/>
-                
+                </RouterLink>
             </Box>
             <Box h="30px" color="White" display="flex" gap={{ base: '7px', md: '10px', lg: '15px' }} justifyContent="center" fontSize={{ base: '12px', md: '14px', lg: '15px' }} margin="auto" paddingTop="5px" bg="#333333">
                 
