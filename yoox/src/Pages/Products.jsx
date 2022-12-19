@@ -4,7 +4,7 @@ import ProductCart from "./ProductCart";
 function Products(){
     const [data,setData]=useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:8080/data`)
+        fetch(`https://shpping-app3.onrender.com/category`)
         .then((res)=>res.json())
         .then((res)=>setData(res))
         .catch((err)=>console.log(err))

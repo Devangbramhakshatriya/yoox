@@ -8,7 +8,7 @@ function Details(){
     const {id}=useParams();
     const [state,setState]=useState({});
     useEffect(()=>{
-        fetch(`http://localhost:8080/data/${id}`)
+        fetch(`https://shpping-app3.onrender.com/category/${id}`)
         .then((res)=>res.json())
         .then((res)=>setState(res))
         .catch((err)=>console.log(err))

@@ -4,7 +4,7 @@ import {Link as RouterLink} from "react-router-dom";
 function HomeCards(){
     const [data,setData]=useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:8080/category`)
+        fetch(`https://shpping-app3.onrender.com/category`)
         .then((res)=>res.json())
         .then((res)=>setData(res))
         .catch((err)=>console.log(err))
